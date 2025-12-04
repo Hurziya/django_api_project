@@ -34,7 +34,7 @@ class PostViewSet(viewsets.ModelViewSet):
         for post in posts_data:
             content = post.get('content', '')
             if len(content) > 70:
-                post['content'] = content[:70] + '...'
+                post['content'] = content[:100] + '...'
 
         return response
 
